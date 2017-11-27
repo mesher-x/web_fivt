@@ -75,6 +75,7 @@ func DifferentWordsCount(text string) int {
 			word = ""
 		}
 	}
+	word = strings.ToLower(word)
 	if _, ok := words[word]; !ok {
 		if (word != "") {
 			words[word] = true
