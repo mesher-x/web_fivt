@@ -75,6 +75,11 @@ func DifferentWordsCount(text string) int {
 			word = ""
 		}
 	}
+	if _, ok := words[word]; !ok {
+		if (word != "") {
+			words[word] = true
+		}
+	}
 	return len(words)
 }
 
